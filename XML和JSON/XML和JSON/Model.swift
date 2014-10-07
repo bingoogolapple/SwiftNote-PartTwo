@@ -19,4 +19,7 @@ import UIKit
 */
 class Model: NSObject {
     var cacheImage:UIImage!
+    var videoId:Int!
+    var name:NSString!
+    var length:Int!
 }

@@ -8,10 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,NSXMLParserDelegate {
     let CELL_ID = "MyCell"
     var tableView:UITableView!
     var model:Model = Model()
+    var dataList:NSMutableArray!
+    var elementStr:NSMutableString!
+    var currentVideo:Model!
     
     override func loadView() {
         self.view = UIView(frame: UIScreen.mainScreen().bounds)
@@ -31,7 +34,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func loadJSON() {
-        println("loadJSON")
         var urlStr = "http://localhost:7777/swift/test.json"
         // 从web服务器直接加载数据
         // 提示：NSData本身具有同步方法，但是在实际开发中，不要使用此方法。在使用NSData的同步方法时，无法指定超时时间，如果服务器连接不正常，会影响用户体验
@@ -73,8 +75,91 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func loadXML() {
-        println("loadXML")
-        testExtension()
+//        testExtension()
+        
+        var urlStr = "http://localhost:7777/swift/test.xml"
+        // 1.建立NSURL
+        var url = NSURL(string: urlStr)
+        // 2.建立NSURLRequest
+        var request = NSURLRequest(URL: url!)
+        // 3.利用NSURLConnection的同步方法加载数据
+        var error : NSError?
+        var response : NSURLResponse?
+        var data = NSURLConnection.sendSynchronousRequest(request,returningResponse: &response,error: &error)
+        if data != nil {
+            handlerXmlDataXmlParser(data!)
+        } else if error == nil {
+            println("空数据")
+        } else {
+            println("错误\(error!.localizedDescription)")
+        }
+    }
+    
+    func handlerXmlDataXmlParser(data:NSData) {
+        // var result = NSString(data: data, encoding: NSUTF8StringEncoding)
+        // println(result!)
+        var parser = NSXMLParser(data: data)!
+        parser.delegate = self
+        parser.parse()
+    }
+    
+    // 在整个解析xml解析完成之前，2、3、4方法会不断被循环调用
+    // 1.解析文档
+    func parserDidStartDocument(parser: NSXMLParser) {
+        println("开始解析文档")
+        if self.dataList == nil {
+            self.dataList = NSMutableArray()
+        } else {
+            self.dataList.removeAllObjects()
+        }
+        
+        if elementStr == nil {
+            self.elementStr = NSMutableString()
+        } else {
+            self.elementStr.setString("")
+        }
+    }
+    // 2.开始解析一个元素
+    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject : AnyObject]) {
+        println("didStartElement \(elementName)  attributeDict\(attributeDict)")
+        if (elementName as NSString).isEqualToString("video") {
+            currentVideo = Model()
+            var videoId = attributeDict["videoId"] as NSString
+            currentVideo.videoId = videoId.integerValue
+        }
+    }
+    
+    // 3.接收元素的数据（因为元素的内容过大，此方法可能会被重复调用，需要拼接数据）
+    func parser(parser: NSXMLParser, foundCharacters string: String) {
+        println("found \(string)")
+        elementStr.setString(string)
+    }
+    // 4.结束解析一个元素
+    // namespaceURI: String?, qualifiedName qName: String? 这两处需要自己手动加上？
+    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        println("didEndElement \(elementName)")
+        var eName = elementName as NSString
+        if eName.isEqualToString("video") {
+            self.dataList.addObject(currentVideo)
+        } else if eName.isEqualToString("name")  {
+            currentVideo.name = NSString(string: elementStr)
+        } else if eName.isEqualToString("length") {
+            currentVideo.length = elementStr.integerValue
+        }
+    }
+    
+    // 5.解析完档元素
+    func parserDidEndDocument(parser: NSXMLParser) {
+        println("解析文档结束")
+
+        for model in dataList {
+           println("\((model as Model).name)")
+        }
+    }
+    // 6.解析出错
+    func parser(parser: NSXMLParser, parseErrorOccurred parseError: NSError) {
+        println("解析出错 \(parseError.localizedDescription)")
+        self.dataList.removeAllObjects()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -106,7 +191,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         } else {
             cell.imageView?.image = model.cacheImage
         }
-        println("加载数据")
+        // println("加载数据")
         return cell
     }
     
@@ -138,8 +223,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         var imageData = NSData(contentsOfURL: url)
         imageView.image = UIImage(data: imageData!)
     }
-    
-    
+
 }
 
 extension ViewController {
