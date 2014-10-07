@@ -14,6 +14,7 @@
 		3112DE0F19E3CD7100C6BDED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3112DE0D19E3CD7100C6BDED /* LaunchScreen.xib */; };
 		3112DE1B19E3CD7100C6BDED /* ____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3112DE1A19E3CD7100C6BDED /* ____Tests.swift */; };
 		3112DE2519E3CDA300C6BDED /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3112DE2419E3CDA300C6BDED /* MyView.swift */; };
+		3112DE2719E3E9F200C6BDED /* 头像1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3112DE2619E3E9F200C6BDED /* 头像1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		3112DE1919E3CD7100C6BDED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3112DE1A19E3CD7100C6BDED /* ____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____Tests.swift"; sourceTree = "<group>"; };
 		3112DE2419E3CDA300C6BDED /* MyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
+		3112DE2619E3E9F200C6BDED /* 头像1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "头像1.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		3112DE0219E3CD7100C6BDED /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3112DE2619E3E9F200C6BDED /* 头像1.png */,
 				3112DE0319E3CD7100C6BDED /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -197,6 +200,7 @@
 			files = (
 				3112DE0A19E3CD7100C6BDED /* Main.storyboard in Resources */,
 				3112DE0F19E3CD7100C6BDED /* LaunchScreen.xib in Resources */,
+				3112DE2719E3E9F200C6BDED /* 头像1.png in Resources */,
 				3112DE0C19E3CD7100C6BDED /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +413,7 @@
 				3112DE2019E3CD7100C6BDED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3112DE2119E3CD7100C6BDED /* Build configuration list for PBXNativeTarget "基本绘图Tests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				3112DE2319E3CD7100C6BDED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
