@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3191BD8E19D1C8B90099CADC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3191BD8D19D1C8B90099CADC /* AppDelegate.swift */; };
+		3191BD9019D1C8B90099CADC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3191BD8F19D1C8B90099CADC /* ViewController.swift */; };
+		3191BD9319D1C8B90099CADC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3191BD9119D1C8B90099CADC /* Main.storyboard */; };
+		3191BD9519D1C8B90099CADC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3191BD9419D1C8B90099CADC /* Images.xcassets */; };
+		3191BD9819D1C8B90099CADC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3191BD9619D1C8B90099CADC /* LaunchScreen.xib */; };
+		3191BDA419D1C8B90099CADC /* ______Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3191BDA319D1C8B90099CADC /* ______Tests.swift */; };
+		3191BDAE19D1C9990099CADC /* RedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3191BDAD19D1C9990099CADC /* RedView.swift */; };
+		3191BDB019D1C9A90099CADC /* GreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3191BDAF19D1C9A90099CADC /* GreenView.swift */; };
+		3191BDB219D1C9BC0099CADC /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3191BDB119D1C9BC0099CADC /* BlueView.swift */; };
+		3191BDB419D1CDDC0099CADC /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3191BDB319D1CDDC0099CADC /* RootView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3191BD9E19D1C8B90099CADC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3191BD8019D1C8B90099CADC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3191BD8719D1C8B90099CADC;
+			remoteInfo = "触摸事件拦截";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3191BD8819D1C8B90099CADC /* 触摸事件拦截.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "触摸事件拦截.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3191BD8C19D1C8B90099CADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3191BD8D19D1C8B90099CADC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3191BD8F19D1C8B90099CADC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3191BD9219D1C8B90099CADC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3191BD9419D1C8B90099CADC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3191BD9719D1C8B90099CADC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		3191BD9D19D1C8B90099CADC /* 触摸事件拦截Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "触摸事件拦截Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3191BDA219D1C8B90099CADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3191BDA319D1C8B90099CADC /* ______Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "______Tests.swift"; sourceTree = "<group>"; };
+		3191BDAD19D1C9990099CADC /* RedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedView.swift; sourceTree = "<group>"; };
+		3191BDAF19D1C9A90099CADC /* GreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreenView.swift; sourceTree = "<group>"; };
+		3191BDB119D1C9BC0099CADC /* BlueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueView.swift; sourceTree = "<group>"; };
+		3191BDB319D1CDDC0099CADC /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3191BD8519D1C8B90099CADC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3191BD9A19D1C8B90099CADC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3191BD7F19D1C8B90099CADC = {
+			isa = PBXGroup;
+			children = (
+				3191BD8A19D1C8B90099CADC /* 触摸事件拦截 */,
+				3191BDA019D1C8B90099CADC /* 触摸事件拦截Tests */,
+				3191BD8919D1C8B90099CADC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3191BD8919D1C8B90099CADC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3191BD8819D1C8B90099CADC /* 触摸事件拦截.app */,
+				3191BD9D19D1C8B90099CADC /* 触摸事件拦截Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3191BD8A19D1C8B90099CADC /* 触摸事件拦截 */ = {
+			isa = PBXGroup;
+			children = (
+				3191BD8D19D1C8B90099CADC /* AppDelegate.swift */,
+				3191BD8F19D1C8B90099CADC /* ViewController.swift */,
+				3191BDB319D1CDDC0099CADC /* RootView.swift */,
+				3191BDAD19D1C9990099CADC /* RedView.swift */,
+				3191BDAF19D1C9A90099CADC /* GreenView.swift */,
+				3191BDB119D1C9BC0099CADC /* BlueView.swift */,
+				3191BD9119D1C8B90099CADC /* Main.storyboard */,
+				3191BD9419D1C8B90099CADC /* Images.xcassets */,
+				3191BD9619D1C8B90099CADC /* LaunchScreen.xib */,
+				3191BD8B19D1C8B90099CADC /* Supporting Files */,
+			);
+			path = "触摸事件拦截";
+			sourceTree = "<group>";
+		};
+		3191BD8B19D1C8B90099CADC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3191BD8C19D1C8B90099CADC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3191BDA019D1C8B90099CADC /* 触摸事件拦截Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3191BDA319D1C8B90099CADC /* ______Tests.swift */,
+				3191BDA119D1C8B90099CADC /* Supporting Files */,
+			);
+			path = "触摸事件拦截Tests";
+			sourceTree = "<group>";
+		};
+		3191BDA119D1C8B90099CADC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3191BDA219D1C8B90099CADC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3191BD8719D1C8B90099CADC /* 触摸事件拦截 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3191BDA719D1C8B90099CADC /* Build configuration list for PBXNativeTarget "触摸事件拦截" */;
+			buildPhases = (
+				3191BD8419D1C8B90099CADC /* Sources */,
+				3191BD8519D1C8B90099CADC /* Frameworks */,
+				3191BD8619D1C8B90099CADC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "触摸事件拦截";
+			productName = "触摸事件拦截";
+			productReference = 3191BD8819D1C8B90099CADC /* 触摸事件拦截.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3191BD9C19D1C8B90099CADC /* 触摸事件拦截Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3191BDAA19D1C8B90099CADC /* Build configuration list for PBXNativeTarget "触摸事件拦截Tests" */;
+			buildPhases = (
+				3191BD9919D1C8B90099CADC /* Sources */,
+				3191BD9A19D1C8B90099CADC /* Frameworks */,
+				3191BD9B19D1C8B90099CADC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3191BD9F19D1C8B90099CADC /* PBXTargetDependency */,
+			);
+			name = "触摸事件拦截Tests";
+			productName = "触摸事件拦截Tests";
+			productReference = 3191BD9D19D1C8B90099CADC /* 触摸事件拦截Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3191BD8019D1C8B90099CADC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = bingoogol;
+				TargetAttributes = {
+					3191BD8719D1C8B90099CADC = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					3191BD9C19D1C8B90099CADC = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 3191BD8719D1C8B90099CADC;
+					};
+				};
+			};
+			buildConfigurationList = 3191BD8319D1C8B90099CADC /* Build configuration list for PBXProject "触摸事件拦截" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3191BD7F19D1C8B90099CADC;
+			productRefGroup = 3191BD8919D1C8B90099CADC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3191BD8719D1C8B90099CADC /* 触摸事件拦截 */,
+				3191BD9C19D1C8B90099CADC /* 触摸事件拦截Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3191BD8619D1C8B90099CADC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3191BD9319D1C8B90099CADC /* Main.storyboard in Resources */,
+				3191BD9819D1C8B90099CADC /* LaunchScreen.xib in Resources */,
+				3191BD9519D1C8B90099CADC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3191BD9B19D1C8B90099CADC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3191BD8419D1C8B90099CADC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3191BD9019D1C8B90099CADC /* ViewController.swift in Sources */,
+				3191BD8E19D1C8B90099CADC /* AppDelegate.swift in Sources */,
+				3191BDB419D1CDDC0099CADC /* RootView.swift in Sources */,
+				3191BDB019D1C9A90099CADC /* GreenView.swift in Sources */,
+				3191BDAE19D1C9990099CADC /* RedView.swift in Sources */,
+				3191BDB219D1C9BC0099CADC /* BlueView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3191BD9919D1C8B90099CADC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3191BDA419D1C8B90099CADC /* ______Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3191BD9F19D1C8B90099CADC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3191BD8719D1C8B90099CADC /* 触摸事件拦截 */;
+			targetProxy = 3191BD9E19D1C8B90099CADC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3191BD9119D1C8B90099CADC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3191BD9219D1C8B90099CADC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3191BD9619D1C8B90099CADC /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3191BD9719D1C8B90099CADC /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3191BDA519D1C8B90099CADC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3191BDA619D1C8B90099CADC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3191BDA819D1C8B90099CADC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "触摸事件拦截/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3191BDA919D1C8B90099CADC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "触摸事件拦截/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3191BDAB19D1C8B90099CADC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "触摸事件拦截Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/触摸事件拦截.app/触摸事件拦截";
+			};
+			name = Debug;
+		};
+		3191BDAC19D1C8B90099CADC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "触摸事件拦截Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/触摸事件拦截.app/触摸事件拦截";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3191BD8319D1C8B90099CADC /* Build configuration list for PBXProject "触摸事件拦截" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3191BDA519D1C8B90099CADC /* Debug */,
+				3191BDA619D1C8B90099CADC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3191BDA719D1C8B90099CADC /* Build configuration list for PBXNativeTarget "触摸事件拦截" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3191BDA819D1C8B90099CADC /* Debug */,
+				3191BDA919D1C8B90099CADC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3191BDAA19D1C8B90099CADC /* Build configuration list for PBXNativeTarget "触摸事件拦截Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3191BDAB19D1C8B90099CADC /* Debug */,
+				3191BDAC19D1C8B90099CADC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3191BD8019D1C8B90099CADC /* Project object */;
+}

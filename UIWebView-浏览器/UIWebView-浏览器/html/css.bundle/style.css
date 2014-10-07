@@ -1,0 +1,1169 @@
+﻿#EntryTag {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 20px 0px 20px 0px;
+    border: none;
+    padding: 0px;
+}
+
+.topicListFooter {
+    position: relative;
+    width: 690px;
+    height: 30px;
+    margin: 0px;
+    border: none;
+    padding: 0px 20px 20px 20px;
+    text-align: right;
+}
+
+#divRefreshComments {
+    position: relative;
+    width: 690px;
+    height: 30px;
+    margin: 0px 20px 0px 20px;
+    border: none;
+    padding: 0px;
+    text-align: right;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #F4EDE3;
+    font-family: verdana,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+fieldset, img {
+    border: 0px;
+}
+
+div {
+    /*margin-bottom:15px;*/
+    background-color: Transparent;
+}
+
+table {
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+ul {
+    word-break: break-all;
+}
+
+li {
+    list-style: none;
+}
+
+.clear {
+}
+
+a:link {
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+#home {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+    background-color: #F4EDE3;
+    background-image: url(top.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    font-family: 微软雅黑;
+}
+
+#header {
+    position: relative;
+    top: 0px;
+    left: auto;
+    width: 950px;
+    height: 310px;
+    margin: auto;
+    border: none;
+    padding: 0px;
+    background: none;
+}
+
+#blogTitle {
+    position: relative;
+    top: 130px;
+    left: 0px;
+    width: 740px;
+    height: 75px;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+    background: none;
+}
+
+    #blogTitle h1 {
+        float: left;
+        margin: 0px;
+        border: none;
+        padding: 0px;
+    }
+
+    #blogTitle a {
+        color: #000000;
+        font-family: 微软雅黑, 幼圆, 微软雅黑, 微软雅黑;
+        font-size: 36px;
+        font-weight: normal;
+    }
+
+    #blogTitle h2 {
+        float: left;
+        width: 740px;
+        margin: 0px;
+        border: none;
+        padding: 0px;
+        color: #666666;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: normal;
+        text-decoration: none;
+    }
+
+#blogLogo {
+    float: left;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+}
+
+#navigator {
+    position: relative;
+    top: 150px;
+    left: 0px;
+    height: 40px;
+    clear: both;
+}
+
+#navList {
+    min-height: 40px;
+    float: left;
+}
+
+    #navList li {
+        float: left;
+    }
+
+    #navList a {
+        display: block;
+        width: 70px;
+        height: 31px;
+        float: left;
+        text-align: center;
+        padding-top: 9px;
+        font-size: 14px;
+        font-family: 微软雅黑, 微软雅黑, 微软雅黑, 微软雅黑;
+    }
+
+        #navList a:link, #navList a:visited, #navList a:active {
+            color: #555;
+        }
+
+        #navList a:hover {
+            font-size: 18px;
+            color: black;
+            text-decoration: none;
+        }
+
+    #navList img {
+        padding-top: 6px;
+    }
+
+.blogStats {
+    float: right;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+    background: none;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+#footer {
+    position: relative;
+    top: 0px;
+    left: auto;
+    width: 950px;
+    height: auto;
+    margin: auto;
+    border: none;
+    padding: 30px 0px 30px 0px;
+    background: none;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+}
+
+#main {
+    position: relative;
+    top: 0px;
+    left: auto;
+    width: 950px;
+    height: auto;
+    margin: auto;
+    border: none;
+    padding-right: 0px;
+}
+
+#mainContent {
+    float: right;
+}
+
+    #mainContent .forFlow {
+        background-position: right top;
+    }
+
+.day {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 0px 20px 0px 20px;
+    border: none;
+    padding: 0px;
+}
+
+.dayTitle {
+    display: none;
+}
+
+.postTitle {
+    position: relative;
+    width: 690px;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+}
+
+    .postTitle a {
+        color: #6A6352;
+        font-family: 微软雅黑, 华文细黑, 黑体, Arial;
+        font-size: 18px;
+        font-weight: normal;
+    }
+
+.postCon {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 10px 0px 0px 0px;
+    border: none;
+    padding: 0px;
+    color: #494949;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    line-height: 1.4;
+}
+
+    .postCon a {
+        color: #494949;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+.postDesc {
+    position: relative;
+    width: 690px;
+    height: 30px;
+    margin: 0px;
+    border-bottom: #CCCCCC 1px dashed;
+    padding: 0px;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+    line-height: 1.4;
+}
+
+.postSeparator {
+    display: none;
+}
+
+#sideBar {
+    width: 205px;
+    height: auto;
+    float: left;
+}
+
+#sideBarMain {
+    position: relative;
+    width: 205px;
+    height: auto;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+    background: none;
+}
+
+#leftcontentcontainer {
+    position: relative;
+    width: 205px;
+    height: auto;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+    background: none;
+}
+
+.newsItem {
+    position: relative;
+    width: 185px;
+    height: auto;
+    margin: 0px 0px 15px 0px;
+    border: none;
+    padding: 10px;
+    color: #6A6352;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+    .newsItem a {
+        color: #6A6352;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+    .newsItem .catListTitle {
+        position: relative;
+        top: -10px;
+        left: -10px;
+        width: 195px;
+        height: 19px;
+        margin: 0px;
+        border-bottom: #D6DDDC 1px solid;
+        padding: 5px 0px 0px 10px;
+        background-color: Transparent;
+        color: #55626E;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+#calendar {
+    position: relative;
+    width: 205px;
+    height: auto;
+    margin: 0px 0px 15px 0px;
+    border: none;
+    padding: 24px 0px 0px 0px;
+    background-color: #F4EDE3;
+}
+
+    #calendar .Cal {
+        position: relative;
+        width: 205px;
+        height: auto;
+        margin: 0px;
+        border-top: #D6DDDC 1px solid;
+        padding: 0px;
+        background-color: Transparent;
+    }
+
+.Cal {
+    cursor: default;
+    color: #6A6352;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    line-height: 20px;
+}
+
+.CalTitle {
+    width: 200px;
+    color: #6A6352;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+}
+
+.CalDayHeader {
+    font-weight: bold;
+}
+
+.CalTodayDay {
+    color: #F60000;
+}
+
+#calendar table a:hover {
+    background-color: #F66000;
+    font-weight: bold;
+}
+
+#calendar .CalNextPrev a {
+}
+
+.catListTitle {
+    position: relative;
+    width: 195px;
+    height: 19px;
+    margin: 0px;
+    border-bottom: #D6DDDC 1px solid;
+    padding: 5px 0px 0px 10px;
+    background-color: Transparent;
+    color: #55626E;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.catListComment {
+    position: relative;
+    width: 205px;
+    height: auto;
+    margin: 0px 0px 15px 0px;
+    border: none;
+    padding: 0px;
+}
+
+.divRecentCommentAticle {
+    position: relative;
+    width: 185px;
+    height: auto;
+    margin: 10px 10px 0px 10px;
+    border: none;
+    padding: 0px;
+}
+
+    .divRecentCommentAticle a {
+        color: #6A6352;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 20px;
+    }
+
+.divRecentComment {
+    position: relative;
+    width: 185px;
+    height: auto;
+    margin: 0px 10px 10px 10px;
+    border-bottom: #CCCCCC 1px dashed;
+    padding: 0px;
+    color: #6A6352;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+    line-height: 20px;
+}
+
+#sideBarMain ul {
+    position: relative;
+    width: 185px;
+    height: auto;
+    margin: 0px;
+    border: none;
+    padding: 10px;
+    color: #6A6352;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+    line-height: 20px;
+}
+
+    #sideBarMain ul a {
+        color: #6A6352;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 20px;
+    }
+
+#topics {
+    position: relative;
+    width: 710px;
+    height: auto;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+}
+
+    #topics .postTitle {
+        position: relative;
+        width: 690px;
+        margin: 0px;
+        border: none;
+        padding: 0px;
+    }
+
+        #topics .postTitle a {
+            color: #6A6352;
+            font-family: 微软雅黑, 华文细黑, 黑体, Arial;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+.postBody {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+    color: #494949;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+    .postBody a {
+        color: #494949;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        text-decoration: underline;
+    }
+
+#topics .postDesc {
+    position: relative;
+    width: 690px;
+    height: 30px;
+    margin: 0px;
+    border-bottom: #CCCCCC 1px dashed;
+    padding: 0px;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.feedback_area_title {
+    position: relative;
+    width: 690px;
+    height: 20px;
+    margin: 0px 20px 0px 20px;
+    border: none;
+    padding: 0px;
+    color: #55626E;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.louzhu {
+}
+
+.feedbackItem {
+    margin-top: 10px;
+}
+
+.feedbackManage {
+    position: relative;
+    /*width:690px;*/ height: 20px;
+    margin: 0px 20px 0px 20px;
+    border: none;
+    padding: 0px;
+    float: right;
+}
+
+    .feedbackManage a {
+        color: #6A6352;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+.feedbackListSubtitle {
+    position: relative;
+    widows: 690px;
+    height: auto;
+    margin: 0px 20px 0px 20px;
+    border: none;
+    padding: 0px;
+    color: #6A6352;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+    .feedbackListSubtitle a {
+        color: #6A6352;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+.feedbackCon {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 0px 20px 0px 20px;
+    border: #CCCCCC 1px dashed;
+    padding: 5px;
+    color: #878787;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+    .feedbackCon a {
+        color: #878787;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+.entrylistTitle, .PostListTitle {
+    width: 690px;
+    height: auto;
+    margin: 0px 20px 0px 20px;
+    border: none;
+    padding: 0px;
+    color: #55626E;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.entrylistDescription {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 5px 20px 20px 20px;
+    border: none;
+    padding: 0px;
+    color: #55626E;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.entrylistItem {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 0px 20px 0px 20px;
+    border-bottom: #CCCCCC 1px dashed;
+    padding: 10px 0px 10px 0px;
+}
+
+.entrylistPosttitle {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+}
+
+    .entrylistPosttitle a {
+        color: #6A6352;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+.entrylistPostSummary {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 0px;
+    border: none;
+    padding: 10px 0px 10px 0px;
+    color: #494949;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+    .entrylistPostSummary a {
+        color: #494949;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+.entrylistItemPostDesc {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.entrylist .postSeparator {
+    display: none;
+}
+
+.Pager {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 5px 20px 20px 20px;
+    border: none;
+    padding: 0px;
+    text-align: right;
+}
+
+.PostList {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 0px 20px 0px 20px;
+    border-bottom: #CCCCCC 1px dashed;
+    padding: 10px 0px 10px 0px;
+}
+
+.postTitl2 {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+}
+
+    .postTitl2 a {
+        color: #6A6352;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+.postDesc2 {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.postText2 {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 10px 0px 0px 0px;
+    border: none;
+    padding: 0px;
+    color: #494949;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+    .postText2 a {
+        color: #494949;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+.pfl_feedback_area_title {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 20px 20px 20px 20px;
+    border: none;
+    padding: 0px;
+    color: #55626E;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.pfl_feedbackItem {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 0px 20px 0px 20px;
+    border-bottom: #CCCCCC 1px dashed;
+    padding: 10px 0px 10px 0px;
+}
+
+.pfl_feedbacksubtitle {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+}
+
+.pfl_feedbackname {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+    color: #6A6352;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+    .pfl_feedbackname a {
+        color: #6A6352;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+.pfl_feedbackManage {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+}
+
+.pfl_feedbackCon {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 0px;
+    border: none;
+    padding: 10px 0px 10px 0px;
+    color: #878787;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.pfl_feedbackAnswer {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+    color: #494949;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.gallery {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 0px 20px 0px 20px;
+    border: none;
+    padding: 0px;
+}
+
+.thumbTitle {
+    color: #55626E;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.thumbDescription {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 5px 0px 20px 0px;
+    border: none;
+    padding: 0px;
+    color: #55626E;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+    .thumbDescription a {
+        color: #55626E;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+.divPhoto {
+    margin: 10px;
+    border: #CCCCCC 1px solid;
+    padding: 2px;
+}
+
+#AjaxHolder_PostComment_divCommnentArea {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 0px 20px 0px 20px;
+    border: none;
+    padding: 0px;
+    color: #55626E;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 30px;
+}
+
+.personInfo img {
+    margin: 0px 20px 20px 20px;
+    border: #CCCCCC 1px solid;
+    padding: 2px;
+}
+
+.userDocument {
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+    .userDocument b {
+        color: #55626E;
+        font-family: 微软雅黑, 华文细黑, 黑体, Arial;
+        font-size: 18px;
+        font-weight: normal;
+        text-decoration: none;
+        line-height: 50px;
+    }
+
+.pages {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 0px 20px 0px 20px;
+    border: none;
+    padding: 0px;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: right;
+}
+
+#Profile1_panelAdd {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 0px 20px 0px 20px;
+    border: none;
+    padding: 0px;
+    color: #55626E;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 30px;
+}
+
+.postBody {
+}
+
+    .postBody p, .postCon p {
+    }
+
+    .postBody h2 {
+    }
+
+    .postBody h3 {
+    }
+
+    .postBody h4 {
+    }
+
+    .postBody h5 {
+    }
+
+    .postBody a:link, .postBody a:visited, .postBody a:active {
+    }
+
+.postCon a:link, .postCon a:visited, .postCon a:active {
+}
+
+.postBody ul, .postCon ul {
+}
+
+.postBody li, .postCon li {
+}
+
+.postBody blockquote {
+}
+
+.commentform {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 0px 20px 0px 20px;
+    border: none;
+    padding: 0px;
+}
+
+    .commentform p, .commentform span {
+        color: #55626E;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        text-decoration: none;
+        line-height: 30px;
+    }
+
+#comment_nav {
+    position: relative;
+    width: 690px;
+    height: 30px;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+    text-align: right;
+}
+
+#commentform_title {
+    color: #6A6352;
+}
+
+.commentbox_title {
+    margin-bottom: 0px;
+}
+
+.commentbox_title_left {
+    color: #6A6352;
+}
+
+.commentbox_title_right {
+    float: right;
+    width: auto;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+}
+
+.comment_btn {
+    width: 80px;
+}
+
+#relative_search, .c_ad_block {
+    position: relative;
+    min-width: 0px;
+    min-height: 0px;
+    margin: 10px 0px 0px 0px;
+    border: #CCCCCC 1px dashed;
+    padding: 5px;
+    color: #55626E;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 30px;
+}
+
+.galleryTitle {
+    position: relative;
+    width: 690px;
+    height: auto;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+    color: #55626E;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.comment_pager {
+    padding-left: 20px;
+    font-size: 12px;
+    color: #6A6352;
+}
+
+.post {
+    padding-left: 20px;
+}
+
+.div_my_zzk {
+    margin-left: 10px;
+}
+
+.mySearch {
+    padding-bottom: 5px;
+}
+
+#cnblogs_post_body .postTitle{
+    height:auto;
+}

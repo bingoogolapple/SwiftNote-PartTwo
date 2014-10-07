@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		31667FC319D2EC6400B4DADF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31667FC219D2EC6400B4DADF /* AppDelegate.swift */; };
+		31667FC519D2EC6400B4DADF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31667FC419D2EC6400B4DADF /* ViewController.swift */; };
+		31667FC819D2EC6400B4DADF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31667FC619D2EC6400B4DADF /* Main.storyboard */; };
+		31667FCA19D2EC6400B4DADF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31667FC919D2EC6400B4DADF /* Images.xcassets */; };
+		31667FCD19D2EC6400B4DADF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31667FCB19D2EC6400B4DADF /* LaunchScreen.xib */; };
+		31667FD919D2EC6400B4DADF /* ____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31667FD819D2EC6400B4DADF /* ____Tests.swift */; };
+		31667FE319D2EDF000B4DADF /* ShakeListenerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31667FE219D2EDF000B4DADF /* ShakeListenerView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		31667FD319D2EC6400B4DADF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 31667FB519D2EC6400B4DADF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 31667FBC19D2EC6400B4DADF;
+			remoteInfo = "摇晃事件";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		31667FBD19D2EC6400B4DADF /* 摇晃事件.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "摇晃事件.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		31667FC119D2EC6400B4DADF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31667FC219D2EC6400B4DADF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		31667FC419D2EC6400B4DADF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		31667FC719D2EC6400B4DADF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		31667FC919D2EC6400B4DADF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		31667FCC19D2EC6400B4DADF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		31667FD219D2EC6400B4DADF /* 摇晃事件Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "摇晃事件Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		31667FD719D2EC6400B4DADF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31667FD819D2EC6400B4DADF /* ____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____Tests.swift"; sourceTree = "<group>"; };
+		31667FE219D2EDF000B4DADF /* ShakeListenerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShakeListenerView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		31667FBA19D2EC6400B4DADF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31667FCF19D2EC6400B4DADF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		31667FB419D2EC6400B4DADF = {
+			isa = PBXGroup;
+			children = (
+				31667FBF19D2EC6400B4DADF /* 摇晃事件 */,
+				31667FD519D2EC6400B4DADF /* 摇晃事件Tests */,
+				31667FBE19D2EC6400B4DADF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		31667FBE19D2EC6400B4DADF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				31667FBD19D2EC6400B4DADF /* 摇晃事件.app */,
+				31667FD219D2EC6400B4DADF /* 摇晃事件Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		31667FBF19D2EC6400B4DADF /* 摇晃事件 */ = {
+			isa = PBXGroup;
+			children = (
+				31667FC219D2EC6400B4DADF /* AppDelegate.swift */,
+				31667FC419D2EC6400B4DADF /* ViewController.swift */,
+				31667FE219D2EDF000B4DADF /* ShakeListenerView.swift */,
+				31667FC619D2EC6400B4DADF /* Main.storyboard */,
+				31667FC919D2EC6400B4DADF /* Images.xcassets */,
+				31667FCB19D2EC6400B4DADF /* LaunchScreen.xib */,
+				31667FC019D2EC6400B4DADF /* Supporting Files */,
+			);
+			path = "摇晃事件";
+			sourceTree = "<group>";
+		};
+		31667FC019D2EC6400B4DADF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				31667FC119D2EC6400B4DADF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		31667FD519D2EC6400B4DADF /* 摇晃事件Tests */ = {
+			isa = PBXGroup;
+			children = (
+				31667FD819D2EC6400B4DADF /* ____Tests.swift */,
+				31667FD619D2EC6400B4DADF /* Supporting Files */,
+			);
+			path = "摇晃事件Tests";
+			sourceTree = "<group>";
+		};
+		31667FD619D2EC6400B4DADF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				31667FD719D2EC6400B4DADF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		31667FBC19D2EC6400B4DADF /* 摇晃事件 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31667FDC19D2EC6400B4DADF /* Build configuration list for PBXNativeTarget "摇晃事件" */;
+			buildPhases = (
+				31667FB919D2EC6400B4DADF /* Sources */,
+				31667FBA19D2EC6400B4DADF /* Frameworks */,
+				31667FBB19D2EC6400B4DADF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "摇晃事件";
+			productName = "摇晃事件";
+			productReference = 31667FBD19D2EC6400B4DADF /* 摇晃事件.app */;
+			productType = "com.apple.product-type.application";
+		};
+		31667FD119D2EC6400B4DADF /* 摇晃事件Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31667FDF19D2EC6400B4DADF /* Build configuration list for PBXNativeTarget "摇晃事件Tests" */;
+			buildPhases = (
+				31667FCE19D2EC6400B4DADF /* Sources */,
+				31667FCF19D2EC6400B4DADF /* Frameworks */,
+				31667FD019D2EC6400B4DADF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				31667FD419D2EC6400B4DADF /* PBXTargetDependency */,
+			);
+			name = "摇晃事件Tests";
+			productName = "摇晃事件Tests";
+			productReference = 31667FD219D2EC6400B4DADF /* 摇晃事件Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		31667FB519D2EC6400B4DADF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = bingoogol;
+				TargetAttributes = {
+					31667FBC19D2EC6400B4DADF = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					31667FD119D2EC6400B4DADF = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 31667FBC19D2EC6400B4DADF;
+					};
+				};
+			};
+			buildConfigurationList = 31667FB819D2EC6400B4DADF /* Build configuration list for PBXProject "摇晃事件" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 31667FB419D2EC6400B4DADF;
+			productRefGroup = 31667FBE19D2EC6400B4DADF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				31667FBC19D2EC6400B4DADF /* 摇晃事件 */,
+				31667FD119D2EC6400B4DADF /* 摇晃事件Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		31667FBB19D2EC6400B4DADF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31667FC819D2EC6400B4DADF /* Main.storyboard in Resources */,
+				31667FCD19D2EC6400B4DADF /* LaunchScreen.xib in Resources */,
+				31667FCA19D2EC6400B4DADF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31667FD019D2EC6400B4DADF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		31667FB919D2EC6400B4DADF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31667FC519D2EC6400B4DADF /* ViewController.swift in Sources */,
+				31667FE319D2EDF000B4DADF /* ShakeListenerView.swift in Sources */,
+				31667FC319D2EC6400B4DADF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31667FCE19D2EC6400B4DADF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31667FD919D2EC6400B4DADF /* ____Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		31667FD419D2EC6400B4DADF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 31667FBC19D2EC6400B4DADF /* 摇晃事件 */;
+			targetProxy = 31667FD319D2EC6400B4DADF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		31667FC619D2EC6400B4DADF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31667FC719D2EC6400B4DADF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		31667FCB19D2EC6400B4DADF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31667FCC19D2EC6400B4DADF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		31667FDA19D2EC6400B4DADF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		31667FDB19D2EC6400B4DADF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		31667FDD19D2EC6400B4DADF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "摇晃事件/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		31667FDE19D2EC6400B4DADF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "摇晃事件/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		31667FE019D2EC6400B4DADF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "摇晃事件Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/摇晃事件.app/摇晃事件";
+			};
+			name = Debug;
+		};
+		31667FE119D2EC6400B4DADF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "摇晃事件Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/摇晃事件.app/摇晃事件";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		31667FB819D2EC6400B4DADF /* Build configuration list for PBXProject "摇晃事件" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31667FDA19D2EC6400B4DADF /* Debug */,
+				31667FDB19D2EC6400B4DADF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31667FDC19D2EC6400B4DADF /* Build configuration list for PBXNativeTarget "摇晃事件" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31667FDD19D2EC6400B4DADF /* Debug */,
+				31667FDE19D2EC6400B4DADF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		31667FDF19D2EC6400B4DADF /* Build configuration list for PBXNativeTarget "摇晃事件Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31667FE019D2EC6400B4DADF /* Debug */,
+				31667FE119D2EC6400B4DADF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 31667FB519D2EC6400B4DADF /* Project object */;
+}

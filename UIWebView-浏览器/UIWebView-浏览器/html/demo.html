@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>在Mac OS X 10.8中配置Apache ＋ PHP ＋ MySQL - 趣味苹果开发 - 博客园</title>
+<link type="text/css" rel="stylesheet" href="css.bundle/common.css"/>
+<link id="MainCss" type="text/css" rel="stylesheet" href="images/style.css"/>
+<link type="text/css" rel="stylesheet" href="css.bundle/common2.css"/>
+<link type="text/css" rel="stylesheet" href="css.bundle/shStyle.css"/>
+<script type="text/javascript">
+var currentBlogApp = 'liufan9';
+</script>
+</head>
+<body>
+<a name="top"></a>
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/liufan9/">趣味苹果开发</a></h1>
+<h2>用趣味的心态，开发有趣味的应用。简单是一种美丽~~~</h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="MyLinks1_HomeLink" class="menu" href="http://www.cnblogs.com/">博客园</a></li>
+<li><a id="MyLinks1_MyHomeLink" class="menu" href="http://www.cnblogs.com/liufan9/">首页</a></li>
+<li><a class="menu" href="http://q.cnblogs.com/">博问</a></li>
+<li><a class="menu" href="http://home.cnblogs.com/ing/">闪存</a></li>
+<li><a id="MyLinks1_NewPostLink" class="menu" rel="nofollow" href="http://www.cnblogs.com/liufan9/admin/EditPosts.aspx?opt=1">新随笔</a></li>
+<li><a id="MyLinks1_ContactLink" class="menu" rel="nofollow" href="http://space.cnblogs.com/msg/send/%e8%b6%a3%e5%91%b3%e8%8b%b9%e6%9e%9c%e5%bc%80%e5%8f%91">联系</a></li>
+<li><a id="MyLinks1_Syndication" class="menu" href="http://www.cnblogs.com/liufan9/rss">订阅</a>
+<!--<a id="MyLinks1_XMLLink" class="aHeaderXML" href="http://www.cnblogs.com/liufan9/rss"><img src="http://www.cnblogs.com/images/xml.gif" alt="订阅" /></a>--></li>
+<li><a id="MyLinks1_Admin" class="menu" rel="nofollow" href="http://www.cnblogs.com/liufan9/admin/EditPosts.aspx">管理</a></li>
+</ul>
+		<div class="blogStats">
+			
+			
+<!--done-->
+随笔- 23&nbsp;
+文章- 0&nbsp;
+评论- 58&nbsp;
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+	
+<!--done-->
+<div id="topics">
+	<div class = "post">
+		<h1 class = "postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/liufan9/p/3198327.html">在Mac OS X 10.8中配置Apache ＋ PHP ＋ MySQL</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body"><p>在Mac OS X 10.8中配置Apache＋PHP＋MySQL的内容包括：</p>
+<ol>
+<li><a href="#SetupApache">配置Apache</a></li>
+<li><a href="#SetupPhp">配置PHP</a></li>
+<li><a href="#SetupMysql">安装MySQL</a></li>
+<li><a href="#SetupPhpAdmin">配置PHPAdmin</a></li>
+<li><a href="#SetDBCharacter">设置数据库默认字符集</a></li>
+</ol>
+<p>一. <a name="SetupApache"></a>配置Apache</p>
+<p>1. 启动Apache</p>
+<p>打开终端，输入：</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:csharp;gutter:false;">sudo apachectl start
+</pre>
+</div>
+<p>&nbsp;打开浏览器，输入：</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:csharp;gutter:false;">http://localhost
+</pre>
+</div>
+<p>应该可以看到&rdquo;It works!&ldquo;的页面，该页面位于/Library/WebServer/Documents/目录下，这是Apache的默认根目录。</p>
+<p>&nbsp;2. 配置用户访问目录</p>
+<p>在终端中输入：</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:csharp;gutter:false;">mkdir ~/Sites
+cp /Library/WebServer/Documents/index.html.en index.html</pre>
+</div>
+<p>在用户目录下新建一个名为Sites的目录，作为用户目录的访问路径，并将&nbsp;/Library/WebServer/Documents/index.html复制到用户目录</p>
+<p>输入：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #000000;">cd /etc/apache2/users/
+sudo vi apple.conf</span></pre>
+</div>
+<p>注意：其中apple是你的用户名。</p>
+<p>在vi中，按i开始输入，并输入以下内容：</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:csharp;gutter:false;">&lt;Directory "/Users/apple/Sites/"&gt;
+　　Options Indexes MultiViews
+　　AllowOverride All
+　　Order allow,deny
+　　Allow from all
+&lt;/Directory&gt;
+</pre>
+</div>
+<p>输入完成后，按ESC键，然后输入:wq，保存并关闭vi。</p>
+<p>注意：文件的第一行用于指定用户目录的位置，其中apple是你的用户名。</p>
+<p>在终端中输入：</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:csharp;gutter:false;">sudo apachectl restart
+</pre>
+</div>
+<p>重新启动Apache，此时可以在浏览器中访问：</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:csharp;gutter:false;">http://localhost/~apple</pre>
+</div>
+<p>二. <a name="SetupPhp"></a>配置PHP</p>
+<p>在终端中输入：</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:csharp;gutter:false;">cd /etc/apache2/
+sudo vi httpd.conf
+</pre>
+</div>
+<p>&nbsp;在vi中，输入/php搜索包含php的文本，找到：</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:csharp;gutter:false;">#LoadModule php5_module libexec/apache2/libphp5.so
+</pre>
+</div>
+<p>&nbsp;删除前面的#，然后保存退出。（按shift+i行首输入，按ESC退出编辑，按x删除当前字符，及#，输入:wq，保存并退出。）</p>
+<p>在终端输入：</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:csharp;gutter:false;">cd /etc
+sudo cp php.ini.default php.ini
+sudo apachectl restart
+</pre>
+</div>
+<p>&nbsp;在终端输入：</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:csharp;gutter:false;">cd ~/Sites
+vi info.php
+</pre>
+</div>
+<p>然后在info.php中输入以下内容：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">html</span><span style="color: #0000ff;">&gt;&lt;</span><span style="color: #800000;">body</span><span style="color: #0000ff;">&gt;&lt;</span><span style="color: #800000;">h1</span><span style="color: #0000ff;">&gt;</span>It works!<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">h1</span><span style="color: #0000ff;">&gt;</span><span style="color: #0000ff;">&lt;?</span><span style="color: #ff00ff;">php phpinfo(); </span><span style="color: #0000ff;">?&gt;</span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">body</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">html</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>在浏览器输入：</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:csharp;gutter:false;">http://localhost/~apple/info.php
+</pre>
+</div>
+<p>三. <a name="SetupMysql"></a>安装Mysql</p>
+<p>1. 从Mysql官方网站下载mysql-5.6.12-osx10.7-x86_64.dmg，双击打开该dmg文件。</p>
+<p>2. 运行mysql-5.6.12-osx10.7-x86_64.pkg，安装主程序包；</p>
+<p>3. 运行<span>MySQLStartupItem.pkg，让mysql开机自动运行；</span></p>
+<p><span>4. 运行<span>MySQL.prefPane，在系统偏好中增加mysql服务管理选项；</span></span></p>
+<p><span><span>在终端输入：</span></span></p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:csharp;gutter:false;">sudo vi /etc/bashrc
+</pre>
+</div>
+<p>&nbsp;在bashrc的末尾增加以下两个命令别名，便于快速使用mysql</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:csharp;gutter:false;">#mysql
+alias mysql='/usr/local/mysql/bin/mysql'
+alias mysqladmin='/usr/local/mysql/bin/mysqladmin'
+</pre>
+</div>
+<p>&nbsp;修改mysql默认密码，在终端输入：</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:csharp;gutter:false;">mysqladmin -u root password "123"
+</pre>
+</div>
+<p>&nbsp;其中123位置你可以指定任意密码。</p>
+<p>如果要更改密码可以输入</p>
+<div class="cnblogs_code">
+<pre>mysqladmin -u root -p password "123"</pre>
+</div>
+<p>更改密码前先需要输入以前正确的密码才可以。</p>
+<p>四. <a name="SetupPhpAdmin"></a>配置PHPAdmin</p>
+<p>1. 下载PHPAdmin，解压缩到~/Sites目录下，并将目录重命名为：phpmyadmin；</p>
+<p>2. &nbsp;在浏览器中输入：</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:csharp;gutter:false;">http://localhost/~apple/phpmyadmin/setup/
+</pre>
+</div>
+<p>&nbsp;添加一个服务器配置即可。</p>
+<p>&nbsp;五. <a name="SetDBCharacter"></a>设置数据库默认字符集</p>
+<p>在终端输入：</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:csharp;gutter:false;">mysql -u root -p
+# 创建名为 mydb 的数据库
+create database mydb;
+# 将 mydb 的默认字符集设置为 utf8
+alter database mydb default character set = utf8;
+</pre>
+</div>
+<p>&nbsp;注：mysql默认使用的字符集是latin1，不支持中文，需要设置一下哦。</p>
+<p>搞定收工:)</p>
+<p>P.S.</p>
+<p>网上关于在mac上配置php+mysql的文档比较多，本文仅针对本人的使用需求，简单将步骤记录一下。:)</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p></div><div id="MySignature"></div>
+<script type="text/javascript">
+var isLogined = true;
+var cb_blogId = 74301;
+var cb_entryId = 3198327;
+var cb_blogApp = currentBlogApp;
+var cb_blogUserGuid = "4c322802-99fc-dd11-9e4d-001cf0cd104b";
+var cb_entryCreatedDate = '2013/7/18 15:26:00';
+var enableGoogleAd = true;
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+</script>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+<script type="text/javascript">
+    //SyntaxHighlighter.config.strings.expandSource = '<span><img src="http://static.cnblogs.com/images/expand-code.gif" alt="" class="expand-code-icon"/>View Code</span>';
+    $(function () {  
+        loadViewCount(cb_entryId);
+        fixPostBodyFormat();
+        loadAdUnderPost();
+        loadBlogSignature();
+        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);        
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);        
+    });
+</script>
+		</div>
+		<div class = "postDesc">posted @ <span id="post-date">2013-07-18 15:26</span> <a href='http://www.cnblogs.com/liufan9/'>趣味苹果开发</a> 阅读(<span id="post_view_count">...</span>) 评论(<span id="post_comment_count">...</span>)  <a href ="http://www.cnblogs.com/liufan9/admin/EditPosts.aspx?postid=3198327" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(3198327);return false;">收藏</a></div>
+	</div>
+	<script src="http://counter.cnblogs.com/blog/post/3198327" type="text/javascript"></script>
+	
+</div><!--end: topics 文章、评论容器-->
+<div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" id="lnk_RefreshComments" onclick="return RefreshCommentList();">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+<div id="comment_form_container"></div>
+
+<script type="text/javascript">
+    if (typeof commentManager === 'undefined') {
+        commentManager = new blogCommentManager();
+    }
+    commentManager.loadCommentForm();   
+</script>
+
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="site_nav_under"><a href="http://www.cnblogs.com/" target="_blank" title="程序员的网上家园">博客园首页</a><a href="http://q.cnblogs.com/" target="_blank" title="程序员问答社区">博问</a><a href="http://news.cnblogs.com/" target="_blank" title="IT新闻">新闻</a><a href="http://home.cnblogs.com/ing/" target="_blank">闪存</a><a href="http://job.cnblogs.com/" target="_blank">程序员招聘</a><a href="http://kb.cnblogs.com/" target="_blank">知识库</a></div>
+<div id="ad_under_post_holder"></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+</div>
+
+
+
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"></div>
+</div>
+
+			<div id="blog-calendar" style="displya:none"></div>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright &copy;2013 趣味苹果开发
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+</body>
+</html>
