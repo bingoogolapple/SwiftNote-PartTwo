@@ -14,6 +14,7 @@
 		319644AF19E6BFE300ECB663 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 319644AD19E6BFE300ECB663 /* LaunchScreen.xib */; };
 		319644BB19E6BFE400ECB663 /* ____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319644BA19E6BFE400ECB663 /* ____Tests.swift */; };
 		319644C519E6C24A00ECB663 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319644C419E6C24A00ECB663 /* MyView.swift */; };
+		319644C719E6DBCC00ECB663 /* MyRoateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319644C619E6DBCC00ECB663 /* MyRoateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		319644B919E6BFE400ECB663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		319644BA19E6BFE400ECB663 /* ____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____Tests.swift"; sourceTree = "<group>"; };
 		319644C419E6C24A00ECB663 /* MyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
+		319644C619E6DBCC00ECB663 /* MyRoateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRoateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				319644A419E6BFE300ECB663 /* AppDelegate.swift */,
 				319644A619E6BFE300ECB663 /* ViewController.swift */,
 				319644C419E6C24A00ECB663 /* MyView.swift */,
+				319644C619E6DBCC00ECB663 /* MyRoateView.swift */,
 				319644A819E6BFE300ECB663 /* Main.storyboard */,
 				319644AB19E6BFE300ECB663 /* Images.xcassets */,
 				319644AD19E6BFE300ECB663 /* LaunchScreen.xib */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				319644C719E6DBCC00ECB663 /* MyRoateView.swift in Sources */,
 				319644C519E6C24A00ECB663 /* MyView.swift in Sources */,
 				319644A719E6BFE300ECB663 /* ViewController.swift in Sources */,
 				319644A519E6BFE300ECB663 /* AppDelegate.swift in Sources */,
@@ -409,6 +413,7 @@
 				319644C019E6BFE400ECB663 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		319644C119E6BFE400ECB663 /* Build configuration list for PBXNativeTarget "画五角星Tests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				319644C319E6BFE400ECB663 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
