@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		319644D719E6EC7000ECB663 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319644D619E6EC7000ECB663 /* AppDelegate.swift */; };
+		319644D919E6EC7000ECB663 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319644D819E6EC7000ECB663 /* ViewController.swift */; };
+		319644DE19E6EC7000ECB663 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 319644DD19E6EC7000ECB663 /* Images.xcassets */; };
+		319644E119E6EC7000ECB663 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 319644DF19E6EC7000ECB663 /* LaunchScreen.xib */; };
+		319644ED19E6EC7000ECB663 /* ____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319644EC19E6EC7000ECB663 /* ____Tests.swift */; };
+		319644F919E6ECFC00ECB663 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319644F819E6ECFC00ECB663 /* MediaPlayer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		319644E719E6EC7000ECB663 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 319644C919E6EC7000ECB663 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 319644D019E6EC7000ECB663;
+			remoteInfo = "视频播放";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		319644D119E6EC7000ECB663 /* 视频播放.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "视频播放.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		319644D519E6EC7000ECB663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		319644D619E6EC7000ECB663 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		319644D819E6EC7000ECB663 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		319644DD19E6EC7000ECB663 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		319644E019E6EC7000ECB663 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		319644E619E6EC7000ECB663 /* 视频播放Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "视频播放Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		319644EB19E6EC7000ECB663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		319644EC19E6EC7000ECB663 /* ____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____Tests.swift"; sourceTree = "<group>"; };
+		319644F819E6ECFC00ECB663 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		319644FC19E6FC3100ECB663 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		319644CE19E6EC7000ECB663 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				319644F919E6ECFC00ECB663 /* MediaPlayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		319644E319E6EC7000ECB663 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		319644C819E6EC7000ECB663 = {
+			isa = PBXGroup;
+			children = (
+				319644F819E6ECFC00ECB663 /* MediaPlayer.framework */,
+				319644D319E6EC7000ECB663 /* 视频播放 */,
+				319644E919E6EC7000ECB663 /* 视频播放Tests */,
+				319644D219E6EC7000ECB663 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		319644D219E6EC7000ECB663 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				319644D119E6EC7000ECB663 /* 视频播放.app */,
+				319644E619E6EC7000ECB663 /* 视频播放Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		319644D319E6EC7000ECB663 /* 视频播放 */ = {
+			isa = PBXGroup;
+			children = (
+				319644D619E6EC7000ECB663 /* AppDelegate.swift */,
+				319644D819E6EC7000ECB663 /* ViewController.swift */,
+				319644DD19E6EC7000ECB663 /* Images.xcassets */,
+				319644DF19E6EC7000ECB663 /* LaunchScreen.xib */,
+				319644D419E6EC7000ECB663 /* Supporting Files */,
+			);
+			path = "视频播放";
+			sourceTree = "<group>";
+		};
+		319644D419E6EC7000ECB663 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				319644FC19E6FC3100ECB663 /* video.mp4 */,
+				319644D519E6EC7000ECB663 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		319644E919E6EC7000ECB663 /* 视频播放Tests */ = {
+			isa = PBXGroup;
+			children = (
+				319644EC19E6EC7000ECB663 /* ____Tests.swift */,
+				319644EA19E6EC7000ECB663 /* Supporting Files */,
+			);
+			path = "视频播放Tests";
+			sourceTree = "<group>";
+		};
+		319644EA19E6EC7000ECB663 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				319644EB19E6EC7000ECB663 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		319644D019E6EC7000ECB663 /* 视频播放 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 319644F019E6EC7000ECB663 /* Build configuration list for PBXNativeTarget "视频播放" */;
+			buildPhases = (
+				319644CD19E6EC7000ECB663 /* Sources */,
+				319644CE19E6EC7000ECB663 /* Frameworks */,
+				319644CF19E6EC7000ECB663 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "视频播放";
+			productName = "视频播放";
+			productReference = 319644D119E6EC7000ECB663 /* 视频播放.app */;
+			productType = "com.apple.product-type.application";
+		};
+		319644E519E6EC7000ECB663 /* 视频播放Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 319644F319E6EC7000ECB663 /* Build configuration list for PBXNativeTarget "视频播放Tests" */;
+			buildPhases = (
+				319644E219E6EC7000ECB663 /* Sources */,
+				319644E319E6EC7000ECB663 /* Frameworks */,
+				319644E419E6EC7000ECB663 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				319644E819E6EC7000ECB663 /* PBXTargetDependency */,
+			);
+			name = "视频播放Tests";
+			productName = "视频播放Tests";
+			productReference = 319644E619E6EC7000ECB663 /* 视频播放Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		319644C919E6EC7000ECB663 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = bingoogol;
+				TargetAttributes = {
+					319644D019E6EC7000ECB663 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					319644E519E6EC7000ECB663 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 319644D019E6EC7000ECB663;
+					};
+				};
+			};
+			buildConfigurationList = 319644CC19E6EC7000ECB663 /* Build configuration list for PBXProject "视频播放" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 319644C819E6EC7000ECB663;
+			productRefGroup = 319644D219E6EC7000ECB663 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				319644D019E6EC7000ECB663 /* 视频播放 */,
+				319644E519E6EC7000ECB663 /* 视频播放Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		319644CF19E6EC7000ECB663 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				319644E119E6EC7000ECB663 /* LaunchScreen.xib in Resources */,
+				319644DE19E6EC7000ECB663 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		319644E419E6EC7000ECB663 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		319644CD19E6EC7000ECB663 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				319644D919E6EC7000ECB663 /* ViewController.swift in Sources */,
+				319644D719E6EC7000ECB663 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		319644E219E6EC7000ECB663 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				319644ED19E6EC7000ECB663 /* ____Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		319644E819E6EC7000ECB663 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 319644D019E6EC7000ECB663 /* 视频播放 */;
+			targetProxy = 319644E719E6EC7000ECB663 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		319644DF19E6EC7000ECB663 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				319644E019E6EC7000ECB663 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		319644EE19E6EC7000ECB663 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		319644EF19E6EC7000ECB663 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		319644F119E6EC7000ECB663 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "视频播放/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		319644F219E6EC7000ECB663 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "视频播放/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		319644F419E6EC7000ECB663 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "视频播放Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/视频播放.app/视频播放";
+			};
+			name = Debug;
+		};
+		319644F519E6EC7000ECB663 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "视频播放Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/视频播放.app/视频播放";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		319644CC19E6EC7000ECB663 /* Build configuration list for PBXProject "视频播放" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				319644EE19E6EC7000ECB663 /* Debug */,
+				319644EF19E6EC7000ECB663 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		319644F019E6EC7000ECB663 /* Build configuration list for PBXNativeTarget "视频播放" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				319644F119E6EC7000ECB663 /* Debug */,
+				319644F219E6EC7000ECB663 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		319644F319E6EC7000ECB663 /* Build configuration list for PBXNativeTarget "视频播放Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				319644F419E6EC7000ECB663 /* Debug */,
+				319644F519E6EC7000ECB663 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 319644C919E6EC7000ECB663 /* Project object */;
+}
