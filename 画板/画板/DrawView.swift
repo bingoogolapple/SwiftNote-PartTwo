@@ -17,7 +17,7 @@ class DrawView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.whiteColor()
+        self.backgroundColor = UIColor.yellowColor()
         self.drawPathArray = NSMutableArray()
         self.lineWidth = 10.0
         self.drawColor = UIColor.redColor()
