@@ -19,10 +19,9 @@ class ViewController: UIViewController {
     
     func playVideo() {
         var url = NSBundle.mainBundle().URLForResource("video", withExtension: "mp4")
-        
         moviePlayer = MPMoviePlayerController(contentURL: url)
         // 播放器的大小 16:9
-        moviePlayer.view.frame = CGRectMake(10, 20, 300, 400)
+        moviePlayer.view.frame = CGRectMake(0, 20, 320, 180)
         self.view.addSubview(moviePlayer.view)
         moviePlayer.play()
     }
