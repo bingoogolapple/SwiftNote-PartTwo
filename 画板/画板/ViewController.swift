@@ -24,6 +24,12 @@ class ViewController: UIViewController {
                 self.drawView.drawColor = color
             },selectLineWidthBlock:{ (lineWidth:Int) in
                 self.drawView.lineWidth = CGFloat(lineWidth)
+            },earserBlock:{
+                self.drawView.drawColor = UIColor.whiteColor()
+            },undoBlock:{
+                self.drawView.undo()
+            },clearScreenBlock:{
+                self.drawView.clearScreen()
             }
         )
         self.view.addSubview(toolView)

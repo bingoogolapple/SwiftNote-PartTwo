@@ -18,6 +18,10 @@ enum ButtonActionType : Int {
     case kButtonSave
 }
 
+typealias EarserBlock = () -> Void
+typealias UndoBlock = () -> Void
+typealias ClearScreenBlock = () ->Void
+
 class ToolView: UIView {
     let kButtonSpace:CGFloat = 10.0
     weak var selectedButton:MyButton!
@@ -30,10 +34,17 @@ class ToolView: UIView {
     var selectLineWidthView:SelectLineWidthView!
     var selectLineWidthBlock:SelectLineWidthBlock!
     
-    init(frame: CGRect,selectColorBlock:SelectColorBlock,selectLineWidthBlock:SelectLineWidthBlock) {
+    var earserBlock:EarserBlock!
+    var undoBlock:UndoBlock!
+    var clearScreenBlock:ClearScreenBlock!
+    
+    init(frame: CGRect,selectColorBlock:SelectColorBlock,selectLineWidthBlock:SelectLineWidthBlock,earserBlock:EarserBlock,undoBlock:UndoBlock,clearScreenBlock:ClearScreenBlock) {
         super.init(frame: frame)
         self.selectColorBlock = selectColorBlock
         self.selectLineWidthBlock = selectLineWidthBlock
+        self.earserBlock = earserBlock
+        self.undoBlock = undoBlock
+        self.clearScreenBlock = clearScreenBlock
         
         self.backgroundColor = UIColor.lightGrayColor()
         
@@ -81,6 +92,15 @@ class ToolView: UIView {
             self.showHiddenSelectColorView()
         case ButtonActionType.kButtonLineWidth:
             self.showHiddenSelectLineWidthView()
+        case ButtonActionType.kButtonEarser:
+            self.hiddenHolderView()
+            self.earserBlock()
+        case ButtonActionType.kButtonUndo:
+            self.hiddenHolderView()
+            self.undoBlock()
+        case ButtonActionType.kButtonClearScreen:
+            self.hiddenHolderView()
+            self.clearScreenBlock()
         default:
             break
         }

@@ -46,16 +46,17 @@ class DrawView: UIView {
             
             CGContextDrawPath(context, kCGPathStroke)
         }
-        
-        // 以下代码绘制当前路径的内容，就是手指还没有离开屏幕
-        // 1.绘制路径
-        CGContextAddPath(context, self.drawPath)
-        // 2.设置上下文属性
-        self.drawColor.set()
-        CGContextSetLineWidth(context, self.lineWidth)
-        CGContextSetLineCap(context, self.lineCap)
-        // 3.绘制路径
-        CGContextDrawPath(context, kCGPathStroke)
+        if self.drawPath != nil {
+            // 以下代码绘制当前路径的内容，就是手指还没有离开屏幕
+            // 1.绘制路径
+            CGContextAddPath(context, self.drawPath)
+            // 2.设置上下文属性
+            self.drawColor.set()
+            CGContextSetLineWidth(context, self.lineWidth)
+            CGContextSetLineCap(context, self.lineCap)
+            // 3.绘制路径
+            CGContextDrawPath(context, kCGPathStroke)
+        }
     }
     
     // 触摸开始创建绘图路径
@@ -83,6 +84,17 @@ class DrawView: UIView {
         
         var path = DrawPath.drawPathWithCGPath(self.drawPath, drawColor: self.drawColor, lineWidth: self.lineWidth,lineCap:self.lineCap)
         self.drawPathArray.addObject(path)
+        self.drawPath = nil
+    }
+    
+    func undo() {
+        self.drawPathArray.removeLastObject()
+        setNeedsDisplay()
+    }
+    
+    func clearScreen() {
+        self.drawPathArray.removeAllObjects()
+        setNeedsDisplay()
     }
     
 }
