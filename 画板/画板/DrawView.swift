@@ -11,12 +11,17 @@ import UIKit
 class DrawView: UIView {
     var drawPath:CGMutablePathRef!
     var drawPathArray:NSMutableArray!
+    var lineWidth:CGFloat!
+    var lineCap:CGLineCap!
+    var drawColor:UIColor!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = UIColor.whiteColor()
         self.drawPathArray = NSMutableArray()
-        
+        self.lineWidth = 10.0
+        self.drawColor = UIColor.redColor()
+        self.lineCap = kCGLineCapRound
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -32,11 +37,12 @@ class DrawView: UIView {
     func drawView(context:CGContextRef) {
         // 首先将绘图数组中的路径全部绘制出来
         for path in self.drawPathArray {
-            CGContextAddPath(context, path as CGPathRef)
+            var tempPath = path as DrawPath
+            CGContextAddPath(context, tempPath.path)
             
-            UIColor.redColor().set()
-            CGContextSetLineWidth(context, 20.0)
-            CGContextSetLineCap(context, kCGLineCapRound)
+            tempPath.drawColor.set()
+            CGContextSetLineWidth(context, tempPath.lineWidth)
+            CGContextSetLineCap(context, tempPath.lineCap)
             
             CGContextDrawPath(context, kCGPathStroke)
         }
@@ -45,9 +51,9 @@ class DrawView: UIView {
         // 1.绘制路径
         CGContextAddPath(context, self.drawPath)
         // 2.设置上下文属性
-        UIColor.redColor().set()
-        CGContextSetLineWidth(context, 20.0)
-        CGContextSetLineCap(context, kCGLineCapRound)
+        self.drawColor.set()
+        CGContextSetLineWidth(context, self.lineWidth)
+        CGContextSetLineCap(context, self.lineCap)
         // 3.绘制路径
         CGContextDrawPath(context, kCGPathStroke)
     }
@@ -74,7 +80,12 @@ class DrawView: UIView {
         // 在oc中要将CGPathRdf添加到NSArray之中，需要借助贝塞尔曲线对象（swift中可以直接加了，不用转换）
         // 贝塞尔曲线是UIKit对CGPathRef的一个封装，贝塞尔路径的对象可以直接添加到数组
         // var path = UIBezierPath(CGPath: self.drawPath)
-        self.drawPathArray.addObject(self.drawPath)
+        
+        var path = DrawPath.drawPathWithCGPath(self.drawPath, drawColor: self.drawColor, lineWidth: self.lineWidth,lineCap:self.lineCap)
+        self.drawPathArray.addObject(path)
+        
+        // 测试线宽
+        self.lineWidth = CGFloat(arc4random()) % 10 + 1
     }
     
 }
