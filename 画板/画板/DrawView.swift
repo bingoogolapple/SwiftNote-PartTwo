@@ -17,7 +17,7 @@ class DrawView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.yellowColor()
+        self.backgroundColor = UIColor.whiteColor()
         self.drawPathArray = NSMutableArray()
         self.lineWidth = 10.0
         self.drawColor = UIColor.redColor()
@@ -83,9 +83,6 @@ class DrawView: UIView {
         
         var path = DrawPath.drawPathWithCGPath(self.drawPath, drawColor: self.drawColor, lineWidth: self.lineWidth,lineCap:self.lineCap)
         self.drawPathArray.addObject(path)
-        
-        // 测试线宽
-        self.lineWidth = CGFloat(arc4random()) % 10 + 1
     }
     
 }

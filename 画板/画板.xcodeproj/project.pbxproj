@@ -16,6 +16,8 @@
 		31D2EEF819EA2D0900F513AD /* DrawPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D2EEF719EA2D0900F513AD /* DrawPath.swift */; };
 		31D2EEFC19EA317100F513AD /* ToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D2EEFB19EA317100F513AD /* ToolView.swift */; };
 		31D2EEFE19EA5DAC00F513AD /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D2EEFD19EA5DAC00F513AD /* MyButton.swift */; };
+		31D2EF0019EA78A200F513AD /* SelectColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D2EEFF19EA78A200F513AD /* SelectColorView.swift */; };
+		31F0EB9E19EA9C9D0064C24C /* SelectLineWidthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F0EB9D19EA9C9D0064C24C /* SelectLineWidthView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		31D2EEF719EA2D0900F513AD /* DrawPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawPath.swift; sourceTree = "<group>"; };
 		31D2EEFB19EA317100F513AD /* ToolView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolView.swift; sourceTree = "<group>"; };
 		31D2EEFD19EA5DAC00F513AD /* MyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
+		31D2EEFF19EA78A200F513AD /* SelectColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectColorView.swift; sourceTree = "<group>"; };
+		31F0EB9D19EA9C9D0064C24C /* SelectLineWidthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectLineWidthView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,8 @@
 			children = (
 				31D2EEF519EA1A5700F513AD /* DrawView.swift */,
 				31D2EEFB19EA317100F513AD /* ToolView.swift */,
+				31D2EEFF19EA78A200F513AD /* SelectColorView.swift */,
+				31F0EB9D19EA9C9D0064C24C /* SelectLineWidthView.swift */,
 				31D2EEFD19EA5DAC00F513AD /* MyButton.swift */,
 			);
 			name = view;
@@ -242,6 +248,8 @@
 				31D2EED619EA195500F513AD /* AppDelegate.swift in Sources */,
 				31D2EEF619EA1A5700F513AD /* DrawView.swift in Sources */,
 				31D2EEFE19EA5DAC00F513AD /* MyButton.swift in Sources */,
+				31D2EF0019EA78A200F513AD /* SelectColorView.swift in Sources */,
+				31F0EB9E19EA9C9D0064C24C /* SelectLineWidthView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +433,7 @@
 				31D2EEF119EA195500F513AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		31D2EEF219EA195500F513AD /* Build configuration list for PBXNativeTarget "画板Tests" */ = {
 			isa = XCConfigurationList;
@@ -433,6 +442,7 @@
 				31D2EEF419EA195500F513AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

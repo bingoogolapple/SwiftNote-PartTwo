@@ -8,12 +8,44 @@
 
 import UIKit
 
+enum ButtonActionType : Int {
+    case kButtonColor
+    case kButtonLineWidth
+    case kButtonEarser
+    case kButtonUndo
+    case kButtonClearScreen
+    case kButtonCamera
+    case kButtonSave
+}
+
 class ToolView: UIView {
-    let kButtonSpace:CGFloat = 10
+    let kButtonSpace:CGFloat = 10.0
     weak var selectedButton:MyButton!
-    override init(frame: CGRect) {
+    var holderView:UIView!
+    var currentHolderView:UIView!
+    
+    var selectColorView:SelectColorView!
+    var selectColorBlock:SelectColorBlock!
+    
+    var selectLineWidthView:SelectLineWidthView!
+    var selectLineWidthBlock:SelectLineWidthBlock!
+    
+    init(frame: CGRect,selectColorBlock:SelectColorBlock,selectLineWidthBlock:SelectLineWidthBlock) {
         super.init(frame: frame)
+        self.selectColorBlock = selectColorBlock
+        self.selectLineWidthBlock = selectLineWidthBlock
+        
         self.backgroundColor = UIColor.lightGrayColor()
+        
+        // 添加占位视图
+        holderView = UIView(frame: self.bounds)
+        self.addSubview(holderView)
+        
+        // 添加遮罩视图
+        var maskView = UIView(frame: self.bounds)
+        maskView.backgroundColor = UIColor.lightGrayColor()
+        self.addSubview(maskView)
+        
         var array = ["颜色","线宽","橡皮","撤销","清屏","相机","保存"]
         createButtonsWithArray(array)
     }
@@ -41,8 +73,83 @@ class ToolView: UIView {
         if self.selectedButton != nil && selectedButton != button {
             self.selectedButton.setSelectedMyButton(false)
         }
+        button.setSelectedMyButton(true)
         self.selectedButton = button
-        self.selectedButton.setSelectedMyButton(true)
         
+        switch ButtonActionType(rawValue: button.tag)! {
+        case ButtonActionType.kButtonColor:
+            self.showHiddenSelectColorView()
+        case ButtonActionType.kButtonLineWidth:
+            self.showHiddenSelectLineWidthView()
+        default:
+            break
+        }
     }
+    
+    func showHiddenSelectLineWidthView() {
+        if self.selectLineWidthView == nil {
+            var selectLineWidthView = SelectLineWidthView(frame: self.holderView.bounds, selectLineWidthBlock: { (lineWidth:Int) in
+                self.selectLineWidthBlock(lineWidth:lineWidth)
+                self.showHiddenSelectLineWidthView()
+            })
+            self.selectLineWidthView = selectLineWidthView
+        }
+        showHiddenHolderView(self.selectLineWidthView)
+    }
+    
+    func showHiddenSelectColorView() {
+        if self.selectColorView == nil {
+            var selectColorView = SelectColorView(frame: self.holderView.bounds, selectColorBlock: { (color:UIColor) in
+                self.selectColorBlock(color:color)
+                self.showHiddenSelectColorView()
+            })
+            self.selectColorView = selectColorView
+        }
+        showHiddenHolderView(self.selectColorView)
+    }
+    
+    func showHiddenHolderView(selectedView:UIView) {
+        var isNeedAnimate = true
+        if self.currentHolderView == nil {
+            self.holderView.addSubview(selectedView)
+            self.currentHolderView = selectedView
+            
+            var holderToFrame = self.holderView.frame
+            var toolToFrame = self.frame
+            holderToFrame.origin.y = 44
+            toolToFrame.size.height = 88
+            
+            UIView.animateWithDuration(0.5, animations: {
+                self.frame = toolToFrame
+                self.holderView.frame = holderToFrame
+            })
+        } else {
+            if self.currentHolderView == selectedView {
+                hiddenHolderView()
+            } else {
+                currentHolderView.removeFromSuperview()
+                self.holderView.addSubview(selectedView)
+                self.currentHolderView = selectedView
+            }
+        }
+    }
+    
+    func hiddenHolderView() {
+        if self.currentHolderView != nil {
+            var holderToFrame = self.holderView.frame
+            var toolToFrame = self.frame
+            holderToFrame.origin.y = 0
+            toolToFrame.size.height = 44
+            
+            UIView.animateWithDuration(0.5, animations: {
+                self.frame = toolToFrame
+                self.holderView.frame = holderToFrame
+                },completion: { (finished:Bool) in
+                    self.currentHolderView.removeFromSuperview()
+                    self.currentHolderView = nil
+                }
+            )
+        }
+    }
+    
 }
