@@ -38,13 +38,21 @@ class DrawView: UIView {
         // 首先将绘图数组中的路径全部绘制出来
         for path in self.drawPathArray {
             var tempPath = path as DrawPath
-            CGContextAddPath(context, tempPath.path)
+            if tempPath.image == nil {
+                CGContextAddPath(context, tempPath.path)
+                
+                tempPath.drawColor.set()
+                CGContextSetLineWidth(context, tempPath.lineWidth)
+                CGContextSetLineCap(context, tempPath.lineCap)
+                
+                CGContextDrawPath(context, kCGPathStroke)
+            } else {
+                // 此时坐标系是反的
+                // CGContextDrawImage(context, self.bounds, tempPath.image.CGImage)
+                
+                tempPath.image.drawInRect(self.bounds)
+            }
             
-            tempPath.drawColor.set()
-            CGContextSetLineWidth(context, tempPath.lineWidth)
-            CGContextSetLineCap(context, tempPath.lineCap)
-            
-            CGContextDrawPath(context, kCGPathStroke)
         }
         if self.drawPath != nil {
             // 以下代码绘制当前路径的内容，就是手指还没有离开屏幕
@@ -94,6 +102,13 @@ class DrawView: UIView {
     
     func clearScreen() {
         self.drawPathArray.removeAllObjects()
+        setNeedsDisplay()
+    }
+    
+    func setImage(image:UIImage) {
+        var drawPath = DrawPath()
+        drawPath.image = image
+        self.drawPathArray.addObject(drawPath)
         setNeedsDisplay()
     }
     

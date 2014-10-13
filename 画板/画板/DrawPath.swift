@@ -13,6 +13,7 @@ class DrawPath: NSObject {
     var lineWidth:CGFloat!
     var lineCap:CGLineCap!
     var drawColor:UIColor!
+    var image:UIImage!
     
     class func drawPathWithCGPath(path:CGPathRef,drawColor:UIColor,lineWidth:CGFloat,lineCap:CGLineCap) -> DrawPath {
         var drawPath = DrawPath()
