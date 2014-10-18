@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>mike</string>
+		<key>age</key>
+		<integer>20</integer>
+		<key>card</key>
+		<dict>
+			<key>no</key>
+			<string>123</string>
+		</dict>
+		<key>books</key>
+		<array>
+			<dict>
+				<key>bookName</key>
+				<string>ios 1</string>
+				<key>price</key>
+				<real>28.98</real>
+			</dict>
+			<dict>
+				<key>bookName</key>
+				<string>ios 2</string>
+				<key>price</key>
+				<string>29.88</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>mary</string>
+		<key>age</key>
+		<integer>18</integer>
+		<key>card</key>
+		<dict>
+			<key>no</key>
+			<string>123</string>
+		</dict>
+		<key>books</key>
+		<array>
+			<dict>
+				<key>bookName</key>
+				<string>uikit</string>
+				<key>price</key>
+				<real>28.98</real>
+			</dict>
+			<dict>
+				<key>bookName</key>
+				<string>uikit 2</string>
+				<key>price</key>
+				<string>29.88</string>
+			</dict>
+            <dict>
+				<key>bookName</key>
+				<string>uikit 3</string>
+				<key>price</key>
+				<string>329.88</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

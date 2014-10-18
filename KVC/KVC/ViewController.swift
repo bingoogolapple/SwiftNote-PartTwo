@@ -12,8 +12,20 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        kvcDemo1()
+        kvcDemo2()
         
+    }
+    
+    func kvcDemo2() {
+        var path = NSBundle.mainBundle().pathForResource("Person", ofType: "plist")
+        var array = NSArray(contentsOfFile: path!) as NSArray!
+        var arrayM = NSMutableArray(capacity: array.count)
+        for dict in array {
+            var person = Person()
+            person.setValuesForKeysWithDictionary(dict as NSDictionary)
+            arrayM.addObject(person)
+        }
+        println(arrayM.valueForKeyPath("books.bookName"))
     }
     
     func kvcDemo1() {
