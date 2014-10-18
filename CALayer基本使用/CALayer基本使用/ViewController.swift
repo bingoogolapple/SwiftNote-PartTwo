@@ -8,6 +8,7 @@
 
 import UIKit
 
+// 在实现核心动画时，本质上是将CALayer中的内容转换成位图，从而便于图形硬件的操纵
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
