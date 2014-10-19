@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // 1.实例化自定义图层
+        // 注意：所有的非Root Layer都存在着隐式动画，隐式动画的默认时长为0.25秒。所以要自己定义一个layer，别在根layer上比划
         var myLayer = CALayer()
         myLayer.bounds = CGRectMake(0, 0, 100, 100)
         myLayer.backgroundColor = UIColor.redColor().CGColor
