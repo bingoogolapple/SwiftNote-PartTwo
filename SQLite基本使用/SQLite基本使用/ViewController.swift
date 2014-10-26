@@ -21,6 +21,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // 1.创建（连接）数据库
         self.openDB()
+        
+        //self.initData()
+        
+        self.allPersons()
+    }
+    
+    func initData() {
         // 2.创建数据表
         self.createTable()
         // 3.数据操作
@@ -32,9 +39,11 @@ class ViewController: UIViewController {
             var phoneNo = NSString(format: "1390%05d",arc4random_uniform(100000))
             self.addPersonWidthName(name, age: 18 + Int(arc4random_uniform(20)), phoneNo: phoneNo)
         }
-        
     }
 
+    /**
+    打开数据库
+    */
     func openDB() {
         // 生成存放在沙盒中的数据库完整路径
         var docDir = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as NSString
@@ -49,25 +58,69 @@ class ViewController: UIViewController {
         }
     }
     
+    /**
+    创建数据表
+    */
     func createTable() {
         var sql:NSString = "create table if not exists t_person(id integer primary key autoincrement,name text,age integer,phoneNo text)"
-        
-        var err:UnsafeMutablePointer<Int8> = nil
-        if SQLITE_OK == sqlite3_exec(handle, sql.UTF8String,nil, nil, &err) {
-            println("创建数据表成功")
-        } else {
-            println("创建数据表失败:\(NSString(UTF8String: err)!)")
-        }
+        self.execSql(sql, msg: "创建个人记录表")
     }
     
+    /**
+    添加个人记录
+    
+    :param: name    姓名那个
+    :param: age     年龄
+    :param: phoneNo 电话
+    */
     func addPersonWidthName(name:NSString,age:NSInteger,phoneNo:NSString) {
         // 注意：添加引号
         var sql = NSString(format: "insert into t_person (name,age,phoneNo) values('%@',%d,'%@')", name,age,phoneNo)
+        self.execSql(sql, msg: "添加个人记录")
+    }
+    
+    /**
+    执行单步sql语句
+    
+    :param: sql sql语句
+    :param: msg 提示信息
+    */
+    func execSql(sql:NSString,msg:NSString) {
         var err:UnsafeMutablePointer<Int8> = nil
         if SQLITE_OK == sqlite3_exec(handle, sql.UTF8String, nil,nil,&err) {
-            println("插入数据成功")
+            println("\(msg)成功")
         } else {
-            println("插入数据失败:\(NSString(UTF8String: err)!)")
+            println("\(msg)失败:\(NSString(UTF8String: err)!)")
         }
+    }
+    
+    func allPersons() {
+        var sql:NSString = "SELECT id,name,age,phoneNo FROM t_person"
+        // 1.评估准备sql语句是否正确
+        var stmt:COpaquePointer = nil
+        if SQLITE_OK == sqlite3_prepare_v2(handle, sql.UTF8String, -1, &stmt, nil) {
+            println("ok")
+            // 2.如果能够正常查询，调用单步执行方法，依次取得查询结果
+            // 如果得到一行记录
+            while SQLITE_ROW == sqlite3_step(stmt) {
+                // 3.获取/显示查询结果
+                // sqlite3_column_xxx方法的第二个参数与sql语句中的字段顺序一一对应（从0开始）
+                var id = sqlite3_column_int(stmt, 0)
+                var name =  sqlite3_column_text(stmt, 1)
+                var age =  sqlite3_column_int(stmt, 2)
+                var phoneNo =  sqlite3_column_text(stmt, 3)
+                
+                let utfName = String.fromCString(UnsafePointer<CChar>(name))!
+                let utfPhoneNo = String.fromCString(UnsafePointer<CChar>(phoneNo))!
+                
+                NSLog("id:%d  name:%@  age:%d  phoneNo:%@", id,utfName,age,utfPhoneNo)
+            }
+        } else {
+            println("sql语法错误")
+        }
+        
+        
+        // 4.释放句柄
+        sqlite3_finalize(stmt)
     }
 }
