@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PersonManager.swift
 //  SQLite基本使用
 //
 //  Created by bingoogol on 14/10/26.
@@ -8,39 +8,31 @@
 
 import UIKit
 
-/**
-在应用程序第一次运行时，由于沙盒中没有数据库，所以需要创建一个空的数据库
-创建数据库之后，为了保证能够正常运行，通常需要做一些初始化工作，其中最重要的一项工作就是创建数据表
-而再次使用时就无需再创建数据表
-*/
-class ViewController: UIViewController {
+class PersonManager: NSObject {
     // SQLite数据库的连接，基于该连接可以进行数据库操作
     var handle:COpaquePointer = nil
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // 1.创建（连接）数据库
-        self.openDB()
-        
-        //self.initData()
-        
-        self.allPersons()
+    
+    struct Inner {
+        static var instance: PersonManager?
+        static var token: dispatch_once_t = 0
     }
     
-    func initData() {
+    class func sharedPersonManager() -> PersonManager {
+        dispatch_once(&Inner.token) {
+            Inner.instance = PersonManager()
+        }
+        return Inner.instance!
+    }
+    
+    // 在初始化方法中完成数据库连接工作
+    override init() {
+        super.init()
+        // 1.创建（连接）数据库
+        self.openDB()
         // 2.创建数据表
         self.createTable()
-        // 3.数据操作
-        var array = ["张三","李四","王五","张老头"]
-        // 提示：数据不是批量生成的，而是一条一条依次添加到数据库中的
-        for i in 0 ... 49 {
-            var str = array[Int(arc4random_uniform(4))]
-            var name = NSString(format: "%@%d", str,arc4random_uniform(1000))
-            var phoneNo = NSString(format: "1390%05d",arc4random_uniform(100000))
-            self.addPersonWidthName(name, age: 18 + Int(arc4random_uniform(20)), phoneNo: phoneNo)
-        }
     }
-
+    
     /**
     打开数据库
     */
@@ -49,7 +41,7 @@ class ViewController: UIViewController {
         var docDir = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as NSString
         println(docDir)
         var dbName = docDir.stringByAppendingPathComponent("my.db") as NSString
-
+        
         // 如果数据库不存在，则新建并打开一个数据库，否则直接打开
         if SQLITE_OK == sqlite3_open(dbName.UTF8String, &handle) {
             println("创建/打开数据库成功")
@@ -67,19 +59,6 @@ class ViewController: UIViewController {
     }
     
     /**
-    添加个人记录
-    
-    :param: name    姓名那个
-    :param: age     年龄
-    :param: phoneNo 电话
-    */
-    func addPersonWidthName(name:NSString,age:NSInteger,phoneNo:NSString) {
-        // 注意：添加引号
-        var sql = NSString(format: "insert into t_person (name,age,phoneNo) values('%@',%d,'%@')", name,age,phoneNo)
-        self.execSql(sql, msg: "添加个人记录")
-    }
-    
-    /**
     执行单步sql语句
     
     :param: sql sql语句
@@ -94,14 +73,34 @@ class ViewController: UIViewController {
         }
     }
     
-    func allPersons() {
+    
+    // 新增个人记录
+    func addPerson(person:Person) {
+        // 注意：添加引号
+        var sql = NSString(format: "insert into t_person (name,age,phoneNo) values('%@',%d,'%@')", person.name,person.age,person.phoneNo)
+        self.execSql(sql, msg: "添加个人记录")
+    }
+    
+    // 修改个人记录(修改传入Person对象ID对应的数据库记录的内容)
+    func updatePerson(person:Person) {
+        
+    }
+    
+    // 删除个人记录
+    func removePerson(personID:NSInteger) {
+        
+    }
+    
+    // 查询所有用户信息列表
+    func allPersons() -> NSArray? {
         // 查询排序：ASC 升序（默认的排序方法），DESC 降序。由左至右排序的优先级依次降低，也就是第一个排序列的优先级是最高的
         // 按年龄递增，id递减
         var sql:NSString = "SELECT id,name,age,phoneNo FROM t_person ORDER BY age ASC,id DESC"
         // 1.评估准备sql语句是否正确
         var stmt:COpaquePointer = nil
+        var persons:NSMutableArray!
         if SQLITE_OK == sqlite3_prepare_v2(handle, sql.UTF8String, -1, &stmt, nil) {
-            println("ok")
+            persons = NSMutableArray()
             // 2.如果能够正常查询，调用单步执行方法，依次取得查询结果
             // 如果得到一行记录
             while SQLITE_ROW == sqlite3_step(stmt) {
@@ -112,17 +111,19 @@ class ViewController: UIViewController {
                 var age =  sqlite3_column_int(stmt, 2)
                 var phoneNo =  sqlite3_column_text(stmt, 3)
                 
-                let utfName = String.fromCString(UnsafePointer<CChar>(name))!
-                let utfPhoneNo = String.fromCString(UnsafePointer<CChar>(phoneNo))!
+                let cName = String.fromCString(UnsafePointer<CChar>(name))!
+                let cPhoneNo = String.fromCString(UnsafePointer<CChar>(phoneNo))!
                 
-                NSLog("id:%d  name:%@  age:%d  phoneNo:%@", id,utfName,age,utfPhoneNo)
+                var person = Person.personWithID(NSInteger(id), name: cName, age: NSInteger(age), phoneNo: cPhoneNo)
+                persons.addObject(person)
             }
         } else {
             println("sql语法错误")
         }
         
-        
         // 4.释放句柄
         sqlite3_finalize(stmt)
+        
+        return persons
     }
 }

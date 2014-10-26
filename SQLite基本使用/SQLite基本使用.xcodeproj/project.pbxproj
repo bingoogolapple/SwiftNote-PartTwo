@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31AD23C819FD0A7F003D0E9D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AD23C719FD0A7F003D0E9D /* Person.swift */; };
+		31AD23CB19FD0FBB003D0E9D /* PersonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AD23CA19FD0FBB003D0E9D /* PersonManager.swift */; };
 		31C0ED3719FCA6100091C202 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C0ED3619FCA6100091C202 /* AppDelegate.swift */; };
 		31C0ED3919FCA6100091C202 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C0ED3819FCA6100091C202 /* ViewController.swift */; };
 		31C0ED3C19FCA6100091C202 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C0ED3A19FCA6100091C202 /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31AD23C719FD0A7F003D0E9D /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		31AD23CA19FD0FBB003D0E9D /* PersonManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonManager.swift; sourceTree = "<group>"; };
 		31C0ED3119FCA6100091C202 /* SQLite基本使用.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SQLite基本使用.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C0ED3519FCA6100091C202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31C0ED3619FCA6100091C202 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31AD23C319FD095A003D0E9D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				31AD23C719FD0A7F003D0E9D /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		31AD23C919FD0F9D003D0E9D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				31AD23CA19FD0FBB003D0E9D /* PersonManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		31C0ED2819FCA6100091C202 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +104,8 @@
 			children = (
 				31C0ED3619FCA6100091C202 /* AppDelegate.swift */,
 				31C0ED3819FCA6100091C202 /* ViewController.swift */,
+				31AD23C919FD0F9D003D0E9D /* Service */,
+				31AD23C319FD095A003D0E9D /* Model */,
 				31C0ED3A19FCA6100091C202 /* Main.storyboard */,
 				31C0ED3D19FCA6100091C202 /* Images.xcassets */,
 				31C0ED3F19FCA6100091C202 /* LaunchScreen.xib */,
@@ -218,6 +240,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31AD23CB19FD0FBB003D0E9D /* PersonManager.swift in Sources */,
+				31AD23C819FD0A7F003D0E9D /* Person.swift in Sources */,
 				31C0ED3919FCA6100091C202 /* ViewController.swift in Sources */,
 				31C0ED3719FCA6100091C202 /* AppDelegate.swift in Sources */,
 			);
@@ -416,6 +440,7 @@
 				31C0ED5219FCA6100091C202 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		31C0ED5319FCA6100091C202 /* Build configuration list for PBXNativeTarget "SQLite基本使用Tests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +449,7 @@
 				31C0ED5519FCA6100091C202 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
