@@ -95,7 +95,9 @@ class ViewController: UIViewController {
     }
     
     func allPersons() {
-        var sql:NSString = "SELECT id,name,age,phoneNo FROM t_person"
+        // 查询排序：ASC 升序（默认的排序方法），DESC 降序。由左至右排序的优先级依次降低，也就是第一个排序列的优先级是最高的
+        // 按年龄递增，id递减
+        var sql:NSString = "SELECT id,name,age,phoneNo FROM t_person ORDER BY age ASC,id DESC"
         // 1.评估准备sql语句是否正确
         var stmt:COpaquePointer = nil
         if SQLITE_OK == sqlite3_prepare_v2(handle, sql.UTF8String, -1, &stmt, nil) {
