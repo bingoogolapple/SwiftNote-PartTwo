@@ -9,13 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
     }
-
-    @IBAction func reachability(sender: UIButton) {
+    
+    /**
+    检测联网状态
+    */
+    @IBAction func reachability() {
         AFNetworkReachabilityManager.sharedManager().startMonitoring()
         AFNetworkReachabilityManager.sharedManager().setReachabilityStatusChangeBlock { (status:AFNetworkReachabilityStatus) in
             switch status {
@@ -31,6 +35,18 @@ class ViewController: UIViewController {
             AFNetworkReachabilityManager.sharedManager().stopMonitoring()
         }
     }
-
+    
+    @IBAction func loadJSON() {
+        let manager = AFHTTPRequestOperationManager()
+        manager.GET("",
+            parameters: nil,
+            success: { (operation:AFHTTPRequestOperation!, responseObject:AnyObject!) in
+                println("success")
+            },
+            failure: { (operation:AFHTTPRequestOperation!, error:NSError!) in
+                println("")
+            }
+        )
+    }
     
 }

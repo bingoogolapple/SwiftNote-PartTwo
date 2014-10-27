@@ -13,13 +13,23 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0SA-ET-e4P">
-                                <rect key="frame" x="118" y="54" width="84" height="30"/>
+                                <rect key="frame" x="115" y="54" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Reachability">
+                                <state key="normal" title="检测联网状态">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="reachability:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zQW-aa-Wbn"/>
+                                    <action selector="reachability" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UFE-eH-z3D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CBF-zU-1IA">
+                                <rect key="frame" x="125" y="99" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="加载JSON">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadJSON" destination="vXZ-lx-hvc" eventType="touchUpInside" id="II6-gr-7Q0"/>
                                 </connections>
                             </button>
                         </subviews>
