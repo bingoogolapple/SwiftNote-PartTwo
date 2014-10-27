@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3108A72919FE8E55005AF3F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3108A72819FE8E55005AF3F0 /* AppDelegate.swift */; };
+		3108A72B19FE8E55005AF3F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3108A72A19FE8E55005AF3F0 /* ViewController.swift */; };
+		3108A72E19FE8E55005AF3F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3108A72C19FE8E55005AF3F0 /* Main.storyboard */; };
+		3108A73019FE8E55005AF3F0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3108A72F19FE8E55005AF3F0 /* Images.xcassets */; };
+		3108A73319FE8E55005AF3F0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3108A73119FE8E55005AF3F0 /* LaunchScreen.xib */; };
+		3108A73F19FE8E55005AF3F0 /* AFN__Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3108A73E19FE8E55005AF3F0 /* AFN__Tests.swift */; };
+		52F4A85ACF4BECD372F1EA68 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41E0ABB3406E367BE49EB7F2 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3108A73919FE8E55005AF3F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3108A71B19FE8E55005AF3F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3108A72219FE8E55005AF3F0;
+			remoteInfo = "AFN演练";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3108A72319FE8E55005AF3F0 /* AFN演练.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AFN演练.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3108A72719FE8E55005AF3F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3108A72819FE8E55005AF3F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3108A72A19FE8E55005AF3F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3108A72D19FE8E55005AF3F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3108A72F19FE8E55005AF3F0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3108A73219FE8E55005AF3F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		3108A73819FE8E55005AF3F0 /* AFN演练Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AFN演练Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3108A73D19FE8E55005AF3F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3108A73E19FE8E55005AF3F0 /* AFN__Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFN__Tests.swift; sourceTree = "<group>"; };
+		3108A74819FE91EF005AF3F0 /* AFN演练-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFN演练-Bridging-Header.h"; sourceTree = "<group>"; };
+		41E0ABB3406E367BE49EB7F2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B76CADDB2D00F06CFD28F3AC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D901AAB515C6CD91FCDB19FA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3108A72019FE8E55005AF3F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52F4A85ACF4BECD372F1EA68 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3108A73519FE8E55005AF3F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3108A71A19FE8E55005AF3F0 = {
+			isa = PBXGroup;
+			children = (
+				3108A72519FE8E55005AF3F0 /* AFN演练 */,
+				3108A73B19FE8E55005AF3F0 /* AFN演练Tests */,
+				3108A72419FE8E55005AF3F0 /* Products */,
+				CB791DC5FF8AC644778E24DE /* Pods */,
+				8FF4A40818D8179AD16D8182 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3108A72419FE8E55005AF3F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3108A72319FE8E55005AF3F0 /* AFN演练.app */,
+				3108A73819FE8E55005AF3F0 /* AFN演练Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3108A72519FE8E55005AF3F0 /* AFN演练 */ = {
+			isa = PBXGroup;
+			children = (
+				3108A72819FE8E55005AF3F0 /* AppDelegate.swift */,
+				3108A72A19FE8E55005AF3F0 /* ViewController.swift */,
+				3108A72C19FE8E55005AF3F0 /* Main.storyboard */,
+				3108A72F19FE8E55005AF3F0 /* Images.xcassets */,
+				3108A73119FE8E55005AF3F0 /* LaunchScreen.xib */,
+				3108A72619FE8E55005AF3F0 /* Supporting Files */,
+				3108A74819FE91EF005AF3F0 /* AFN演练-Bridging-Header.h */,
+			);
+			path = "AFN演练";
+			sourceTree = "<group>";
+		};
+		3108A72619FE8E55005AF3F0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3108A72719FE8E55005AF3F0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3108A73B19FE8E55005AF3F0 /* AFN演练Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3108A73E19FE8E55005AF3F0 /* AFN__Tests.swift */,
+				3108A73C19FE8E55005AF3F0 /* Supporting Files */,
+			);
+			path = "AFN演练Tests";
+			sourceTree = "<group>";
+		};
+		3108A73C19FE8E55005AF3F0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3108A73D19FE8E55005AF3F0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8FF4A40818D8179AD16D8182 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41E0ABB3406E367BE49EB7F2 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB791DC5FF8AC644778E24DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D901AAB515C6CD91FCDB19FA /* Pods.debug.xcconfig */,
+				B76CADDB2D00F06CFD28F3AC /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3108A72219FE8E55005AF3F0 /* AFN演练 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3108A74219FE8E55005AF3F0 /* Build configuration list for PBXNativeTarget "AFN演练" */;
+			buildPhases = (
+				1474211BE6435FE79A6E109F /* Check Pods Manifest.lock */,
+				3108A71F19FE8E55005AF3F0 /* Sources */,
+				3108A72019FE8E55005AF3F0 /* Frameworks */,
+				3108A72119FE8E55005AF3F0 /* Resources */,
+				C3EEAD05AF0BEB040607BB6A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AFN演练";
+			productName = "AFN演练";
+			productReference = 3108A72319FE8E55005AF3F0 /* AFN演练.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3108A73719FE8E55005AF3F0 /* AFN演练Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3108A74519FE8E55005AF3F0 /* Build configuration list for PBXNativeTarget "AFN演练Tests" */;
+			buildPhases = (
+				3108A73419FE8E55005AF3F0 /* Sources */,
+				3108A73519FE8E55005AF3F0 /* Frameworks */,
+				3108A73619FE8E55005AF3F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3108A73A19FE8E55005AF3F0 /* PBXTargetDependency */,
+			);
+			name = "AFN演练Tests";
+			productName = "AFN演练Tests";
+			productReference = 3108A73819FE8E55005AF3F0 /* AFN演练Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3108A71B19FE8E55005AF3F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = bingoogolapple;
+				TargetAttributes = {
+					3108A72219FE8E55005AF3F0 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					3108A73719FE8E55005AF3F0 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 3108A72219FE8E55005AF3F0;
+					};
+				};
+			};
+			buildConfigurationList = 3108A71E19FE8E55005AF3F0 /* Build configuration list for PBXProject "AFN演练" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3108A71A19FE8E55005AF3F0;
+			productRefGroup = 3108A72419FE8E55005AF3F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3108A72219FE8E55005AF3F0 /* AFN演练 */,
+				3108A73719FE8E55005AF3F0 /* AFN演练Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3108A72119FE8E55005AF3F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3108A72E19FE8E55005AF3F0 /* Main.storyboard in Resources */,
+				3108A73319FE8E55005AF3F0 /* LaunchScreen.xib in Resources */,
+				3108A73019FE8E55005AF3F0 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3108A73619FE8E55005AF3F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1474211BE6435FE79A6E109F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C3EEAD05AF0BEB040607BB6A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3108A71F19FE8E55005AF3F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3108A72B19FE8E55005AF3F0 /* ViewController.swift in Sources */,
+				3108A72919FE8E55005AF3F0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3108A73419FE8E55005AF3F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3108A73F19FE8E55005AF3F0 /* AFN__Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3108A73A19FE8E55005AF3F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3108A72219FE8E55005AF3F0 /* AFN演练 */;
+			targetProxy = 3108A73919FE8E55005AF3F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3108A72C19FE8E55005AF3F0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3108A72D19FE8E55005AF3F0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3108A73119FE8E55005AF3F0 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3108A73219FE8E55005AF3F0 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3108A74019FE8E55005AF3F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3108A74119FE8E55005AF3F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3108A74319FE8E55005AF3F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D901AAB515C6CD91FCDB19FA /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "AFN演练/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AFN演练/AFN演练-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3108A74419FE8E55005AF3F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B76CADDB2D00F06CFD28F3AC /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "AFN演练/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AFN演练/AFN演练-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		3108A74619FE8E55005AF3F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AFN演练Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AFN演练.app/AFN演练";
+			};
+			name = Debug;
+		};
+		3108A74719FE8E55005AF3F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AFN演练Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AFN演练.app/AFN演练";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3108A71E19FE8E55005AF3F0 /* Build configuration list for PBXProject "AFN演练" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3108A74019FE8E55005AF3F0 /* Debug */,
+				3108A74119FE8E55005AF3F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3108A74219FE8E55005AF3F0 /* Build configuration list for PBXNativeTarget "AFN演练" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3108A74319FE8E55005AF3F0 /* Debug */,
+				3108A74419FE8E55005AF3F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3108A74519FE8E55005AF3F0 /* Build configuration list for PBXNativeTarget "AFN演练Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3108A74619FE8E55005AF3F0 /* Debug */,
+				3108A74719FE8E55005AF3F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3108A71B19FE8E55005AF3F0 /* Project object */;
+}
