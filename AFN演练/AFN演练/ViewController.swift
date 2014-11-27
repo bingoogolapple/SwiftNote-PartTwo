@@ -49,4 +49,9 @@ class ViewController: UIViewController {
         )
     }
     
+    
+    @IBAction func loadXML() {
+        
+    }
+    
 }
